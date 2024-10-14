@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 ::after,
 ::before {
@@ -66,7 +66,7 @@ body {
     font-size: 1.5rem;
 } */
 
-.sidebar-logo {
+/* .sidebar-logo {
     margin: 0 auto;
 }
 
@@ -107,4 +107,169 @@ a.sidebar-link:hover {
 
 .sidebar-item {
     position: relative;
+}  */
+
+/* Estilos generales */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafafa;
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: #231f20;
+    position: fixed;
+    height: 100vh;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.d-flex {
+    align-items: center;
+    padding: 1rem;
+}
+
+#toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 0.5rem;
+}
+
+.sidebar-logo {
+    margin: 0 auto;
+}
+
+.sidebar-logo a {
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: white;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: #48484a;
+    border-left: 3px solid #dcddde;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+/* Estilos para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    
+    #sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        position: relative;
+    }
+
+    ul .sidebar-nav
+
+    #sidebar.expand {
+        width: 100%;
+    }
+
+    #sidebar .sidebar-nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    a.sidebar-link {
+        padding: 1rem;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    a.sidebar-link:hover {
+        background-color: #48484a;
+        border-bottom: 3px solid #dcddde;
+    }
+
+    #toggle-btn {
+        display: block; /* Asegura que el botón de toggle sea visible */
+    }
+
+    .sidebar-logo {
+        display: block; /* Asegura que el logo sea visible */
+    }
+
+    .d-flex {
+        justify-content: space-between; /* Acomoda el logo y el botón en pantallas pequeñas */
+    }
+
+
 }
