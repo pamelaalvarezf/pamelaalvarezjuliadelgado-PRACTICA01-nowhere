@@ -129,14 +129,15 @@ li {
     list-style: none;
 }
 
-h1 {
+/* h1 {
     font-weight: 600;
     font-size: 1.5rem;
-}
+} */
 
 body {
     font-family: 'Poppins', sans-serif;
 }
+
 
 .wrapper {
     display: flex;
@@ -223,6 +224,29 @@ a.sidebar-link:hover {
     position: relative;
 }
 
+/* Imagen de fondo */
+
+.background-image {
+    background-image: url('../IMG/bg-1638x2048.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+/* Imagen PNG centrada */
+
+.centered-image {
+    max-width: 50%; 
+    margin-left: 141px;
+    height: auto; 
+}
+
 /* Estilos para pantallas pequeñas (menos de 768px) */
 @media (max-width: 768px) {
     .wrapper {
@@ -269,6 +293,11 @@ a.sidebar-link:hover {
 
     .d-flex {
         justify-content: space-between; /* Acomoda el logo y el botón en pantallas pequeñas */
+    }
+
+    .centered-image {
+        
+        margin-left: 0;
     }
 
 
