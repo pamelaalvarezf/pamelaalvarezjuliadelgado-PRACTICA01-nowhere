@@ -247,7 +247,29 @@ a.sidebar-link:hover {
     height: auto; 
 }
 
-/* Estilos para pantallas pequeñas (menos de 768px) */
+.cont-pr .row *{
+    padding: 1rem 2rem;
+    background-color: rgba(137, 43, 226, 0.295);
+    border: 1px blueviolet solid;
+}
+
+
+.my-navbar-color{
+    background-color: rgb(88, 17, 155);
+}
+
+.my-button{
+    background-color: rgb(92, 0, 121);
+}
+.my-button:hover{
+background-color: rgb(175, 134, 212);
+}
+
+.wrapper-form{
+    margin: 2rem 12rem;
+}
+
+/* Estilos para pantallas pequeñas (menos de 1024px) */
 @media (max-width: 1024px) {
     .wrapper {
         flex-direction: column;
