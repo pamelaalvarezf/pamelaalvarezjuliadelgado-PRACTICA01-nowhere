@@ -156,18 +156,34 @@ body {
     width: 70px;
     min-width: 70px;
     z-index: 1000;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.35s ease-in-out;
     display: flex;
     flex-direction: column;
     background-color: #231f20;
     position: fixed;
     height: 100vh;
+
 }
 
 #sidebar.expand {
     width: 260px;
     min-width: 260px;
+
+
+
 }
+
+/* .sidebar-logo, 
+span {
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.sidebar-logo.expand, 
+span.expand {
+    opacity: 1;
+} */
+
 
 .d-flex {
     align-items: center;
@@ -270,6 +286,7 @@ background-color: rgb(175, 134, 212);
 }
 
 /* Estilos para pantallas pequeñas (menos de 1024px) */
+
 @media (max-width: 1024px) {
     .wrapper {
         flex-direction: column;
@@ -282,9 +299,7 @@ background-color: rgb(175, 134, 212);
         position: relative;
     }
 
-    ul .sidebar-nav
-
-    #sidebar .expand {
+    #sidebar.expand {
         width: 1024px;
         min-width: 1024px;
     }
