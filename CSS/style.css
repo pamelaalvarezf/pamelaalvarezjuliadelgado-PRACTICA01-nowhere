@@ -284,8 +284,9 @@ background-color: rgb(175, 134, 212);
 
     ul .sidebar-nav
 
-    #sidebar.expand {
-        width: 100%;
+    #sidebar .expand {
+        width: 1024px;
+        min-width: 1024px;
     }
 
     #sidebar .sidebar-nav {
@@ -315,6 +316,7 @@ background-color: rgb(175, 134, 212);
 
     .d-flex {
         justify-content: space-between; /* Acomoda el logo y el botón en pantallas pequeñas */
+        margin: 0px;
     }
 
     .centered-image {
