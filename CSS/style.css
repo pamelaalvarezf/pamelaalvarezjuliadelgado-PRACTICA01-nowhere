@@ -146,9 +146,11 @@ body {
 
 .main {
     min-height: 100vh;
-    width: 100%;
+    flex-direction: column;
+    width: calc(100% - 70px); /* 70px es el ancho del sidebar cuando está contraído */
     overflow: hidden;
-    transition: all 0.35s ease-in-out;
+    margin-left: 70px;
+    transition: all 0.35s ease;
     background-color: #fafafa;
 }
 
@@ -171,6 +173,13 @@ body {
 
 
 
+}
+
+/* Sidebar expandido */
+#sidebar.expand + .main {
+    width: calc(100% - 260px); /* El main se ajusta al espacio restante */
+    margin-left: 260px; /* Desplaza el main para que no esté debajo del sidebar expandido */
+    transition: all 0.3s ease;
 }
 
 /* .sidebar-logo, 
@@ -293,7 +302,11 @@ background-color: rgb(175, 134, 212);
     .wrapper {
         flex-direction: column;
     }
-    
+    .main{
+        margin-left: 0;
+        width: 100%; 
+
+    }
     #sidebar {
         width: 100%;
         height: auto;
@@ -338,9 +351,25 @@ background-color: rgb(175, 134, 212);
     }
 
     .centered-image {
-        
+        padding: 6vh;
         margin-left: 0;
     }
 
 
+}
+
+
+@media (max-width: 414px) {
+.d-flex{
+    flex-direction: column;
+}
+
+.centered-image{
+    padding: 76px 0vh 0vh 0vh;
+}
+
+.video-bg{
+    width: 74%;
+    margin: 0 auto;
+}
 }
