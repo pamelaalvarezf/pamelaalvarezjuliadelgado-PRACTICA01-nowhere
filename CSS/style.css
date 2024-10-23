@@ -242,7 +242,7 @@ a.sidebar-link:hover {
 
 /* Imagen de fondo */
 
-.background-image {
+.background-video {
     background-image: url('../IMG/bg-1638x2048.jpg'); 
     background-size: cover; 
     background-position: center;
@@ -254,6 +254,8 @@ a.sidebar-link:hover {
     align-items: center;
     position: relative; 
 }
+
+
 
 /* Imagen PNG centrada */
 
@@ -308,6 +310,7 @@ background-color: rgb(175, 134, 212);
         display: flex;
         justify-content: space-around;
         padding: 0;
+        align-items: center;
     }
 
     a.sidebar-link {
