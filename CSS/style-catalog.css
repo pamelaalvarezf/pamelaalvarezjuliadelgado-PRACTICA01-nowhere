@@ -1,0 +1,11 @@
+.card {
+    overflow: hidden;
+    border: none; /* Opcional, para quitar el borde de las imágenes */
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Para que las imágenes mantengan su aspecto en todas las pantallas */
+}
+
