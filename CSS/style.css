@@ -296,34 +296,109 @@ background-color: rgb(175, 134, 212);
     margin: 2rem 12rem;
 }
 
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-body{
+    padding: 0;
+}
+
+.exhibitions-section {
+    font-family: 'Poppins', sans-serif; /* Similar a la fuente de la imagen */
+    color: #333; /* Color neutro para el texto */
+}
+
+.section-number {
+    font-size: 3rem; /* Título de sección grande */
+    font-weight: bold;
+    color: #ff5733; /* Color destacado para los números (puedes cambiarlo) */
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666; /* Color suave para el texto */
+}
+
+.section-content hr {
+    border: none;
+    border-top: 1px solid #ccc; /* Líneas finas como separadores */
+    margin: 1rem 0;
+}
+
+.col-md-6 {
+    padding: 4rem;
+}
+
+/* Estilos para el formulario con los colores especificados */
+
+
+
+
+
+.btn-primary {
+    background-color: #dcddde; /* Color del botón de envío */
+    border: none;
+    color: #231f20; /* Texto oscuro en el botón */
+    
+}
+
+.btn-primary:hover {
+    background-color: #fafafa; /* Color del botón al pasar el ratón */
+    color: #231f20;
+}
+
+
+
+
+
+
 /* Estilos para pantallas pequeñas (menos de 1024px) */
 
 @media (max-width: 1024px) {
     .wrapper {
         flex-direction: column;
     }
-    .main{
+    .main {
         margin-left: 0;
-        width: 100%; 
-
+        width: 100%;
     }
+
+   
     #sidebar {
         width: 100%;
+        min-width: 100%;
         height: auto;
         flex-direction: row;
         position: relative;
     }
 
     #sidebar.expand {
-        width: 1024px;
-        min-width: 1024px;
+        /* width: 1024px;
+        min-width: 1024px; */
+        width: 70px;
+        min-width: 70px;
     }
 
     #sidebar .sidebar-nav {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-end;
         padding: 0;
         align-items: center;
+    }
+
+   
+
+    #sidebar.expand + .main {
+        width: calc(100% - 70px);
+        margin-left: 70px;
     }
 
     a.sidebar-link {
@@ -358,6 +433,36 @@ background-color: rgb(175, 134, 212);
 
 }
 
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #sidebar.expand {
+        width: 70px;
+    }
+
+    #sidebar.expand + .main {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .section-number {
+        font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 1.2rem;
+    }
+    .section-content p {
+        font-size: 0.9rem;
+    }
+}
 
 @media (max-width: 414px) {
 .d-flex{

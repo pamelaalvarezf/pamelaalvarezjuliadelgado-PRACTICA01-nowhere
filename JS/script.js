@@ -1,27 +1,25 @@
- const hamburger = document.querySelector("#toggle-btn");
+//  const hamburger = document.querySelector("#toggle-btn");
 
- hamburger.addEventListener("click",function(){
-     document.querySelector("#sidebar").classList.toggle("expand");
+//  hamburger.addEventListener("click",function(){
+//      document.querySelector("#sidebar").classList.toggle("expand");
     
     
 
+// });
+
+const hamburger = document.querySelector("#toggle-btn");
+
+hamburger.addEventListener("click", function () {
+    // Detectamos el tamaño de la pantalla
+    if (window.innerWidth > 1024) {
+        // Solo permitimos expandir el sidebar en pantallas mayores a 1024px
+        document.querySelector("#sidebar").classList.toggle("expand");
+    }
 });
 
-var typed = new Typed("#typed-text", {
-    strings: [
-        "Some typed text",
-        "Created with TypeJS library",
-        "Some other text",
-        "The gallery was created with CSS Grid, check it out!",
-    ],
-    typeSpeed: 80,
+AOS.init({
+    duration: 800, // Duración de la animación en milisegundos
+    easing: 'ease-in-out', // Tipo de animación para entrada y salida
+    once: true, // Si es true, la animación ocurre solo una vez cuando el elemento aparece en pantalla
+    offset: 120, // Distancia desde la cual comienza la animación (en píxeles)
 });
-
-ScrollReveal().reveal(".grid-wrapper > div", {
-delay: 200,
-distance: "50px",
-interval: 100,
-origin: "bottom",
-scale: 0.9,
-});
-
