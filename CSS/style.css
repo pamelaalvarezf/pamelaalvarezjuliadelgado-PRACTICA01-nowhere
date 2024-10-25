@@ -177,9 +177,9 @@ body {
 
 /* Sidebar expandido */
 #sidebar.expand + .main {
-    width: calc(100% - 260px); /* El main se ajusta al espacio restante */
-    margin-left: 260px; /* Desplaza el main para que no esté debajo del sidebar expandido */
-    transition: all 0.3s ease;
+    width: calc(100% - 260px); 
+    margin-left: 260px; 
+    transition: all 0.36s ease;
 }
 
 /* .sidebar-logo, 
@@ -371,5 +371,11 @@ background-color: rgb(175, 134, 212);
 .video-bg{
     width: 74%;
     margin: 0 auto;
+}
+.carousel-inner .carousel-item .row .col-md-4 {
+    display: none;
+}
+.carousel-inner .carousel-item.active .col-md-4:first-child {
+    display: block;
 }
 }

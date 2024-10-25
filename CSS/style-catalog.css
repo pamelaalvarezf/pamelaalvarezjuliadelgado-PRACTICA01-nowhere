@@ -1,11 +1,85 @@
-.card {
+/* .card {
     overflow: hidden;
-    border: none; /* Opcional, para quitar el borde de las imágenes */
+    border: none; 
 }
 
 .card-img-top {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Para que las imágenes mantengan su aspecto en todas las pantallas */
+    object-fit: cover; 
+} */
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+.titulo-gallery {
+    text-align: center;
+    padding: 2rem;
 }
 
+h1 {
+    color: black;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+.typed-text {
+    color:black;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+/* Para controlar que el texto typed no mueva la galeria */
+.text-cont {
+    display: block;
+    height: 50px;
+}
+
+/* Main CSS */
+.grid-wrapper {
+    padding: 1rem 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+.grid-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .grid-wrapper > div:nth-child(even) {
+    opacity: 0 !important;
+} */
+
+.grid-wrapper > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.grid-wrapper .wide {
+    grid-column: span 2;
+}
+.grid-wrapper .tall {
+    grid-row: span 2;
+}
+.grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 414px) {
+    .grid-wrapper > div {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}

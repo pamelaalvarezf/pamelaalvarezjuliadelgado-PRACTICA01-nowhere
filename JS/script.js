@@ -7,22 +7,21 @@
 
 });
 
-// const hamburger = document.querySelector("#toggle-btn");
-// const sidebar = document.querySelector("#sidebar");
+var typed = new Typed("#typed-text", {
+    strings: [
+        "Some typed text",
+        "Created with TypeJS library",
+        "Some other text",
+        "The gallery was created with CSS Grid, check it out!",
+    ],
+    typeSpeed: 80,
+});
 
-// hamburger.addEventListener("click", function() {
-//     if (sidebar.classList.contains("expand")) {
-//         sidebar.style.opacity = 0;
-//         setTimeout(() => {
-//             sidebar.classList.toggle("expand");
-//             sidebar.style.opacity = 1;
-//         }, 250);  // el mimo tiempo a la duración de la trans
-//     } else {
-//         sidebar.classList.toggle("expand");
-//         sidebar.style.opacity = 0;
-//         setTimeout(() => {
-//             sidebar.style.opacity = 1;
-//         }, 10);  // el retraso para que se haga la transición
-//     }
-// });
+ScrollReveal().reveal(".grid-wrapper > div", {
+delay: 200,
+distance: "50px",
+interval: 100,
+origin: "bottom",
+scale: 0.9,
+});
 
