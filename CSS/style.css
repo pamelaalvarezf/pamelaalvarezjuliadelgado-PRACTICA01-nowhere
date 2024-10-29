@@ -22,17 +22,19 @@ li {
     --color4:#dcddde;
     --color5:#ff5733;
     --color6:#ccc;
+    --typo1: "Montserrat", sans-serif;
+    --typo2: "Noto Sans", sans-serif;
 }
 
 h1, label, .display-4 { 
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--typo1);
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
  }
 
  p{
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--typo2);
  }
 
 /* body {
@@ -212,7 +214,7 @@ a.sidebar-link:hover {
 }
 
 .exhibitions-section {
-    font-family: "Montserrat", sans-serif;; /* Similar a la fuente de la imagen */
+    font-family: var(--typo1); /* Similar a la fuente de la imagen */
     color: var(--color2); /* Color neutro para el texto */
 }
 
@@ -264,6 +266,24 @@ a.sidebar-link:hover {
 .btn-primary:hover {
     background-color: var(--color5); /* Color del botón al pasar el ratón */
     color: var(--color2);
+}
+
+footer{
+    background-color: var(--color2);
+}
+
+.footer, p{
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    padding: 25px;
+    color:var(--color1);
+}
+
+.p-autor{
+    padding: 0 29px;
+    font-weight: 600;
+    font: var(--typo1);
 }
 
 
