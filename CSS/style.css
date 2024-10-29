@@ -15,8 +15,16 @@ li {
     list-style: none;
 }
 
+:root {
+    --color1: #fafafa;
+    --color2:#231f20;
+    --color3:#48484a;
+    --color4:#dcddde;
+    --color5:#ff5733;
+    --color6:#ccc;
+}
 
-h1 .display-4 { 
+h1, label, .display-4 { 
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -44,7 +52,7 @@ h1 .display-4 {
     overflow: hidden;
     margin-left: 70px;
     transition: all 0.35s ease;
-    background-color: #fafafa;
+    background-color: var(--color1);
 }
 
 #sidebar {
@@ -56,7 +64,7 @@ h1 .display-4 {
     flex-direction: column;
     justify-content: space-between; /* Espacio entre los elementos para colocar el ícono abajo */
     height: 100vh; 
-    background-color: #231f20;
+    background-color:var(--color2);
     position: fixed;
     height: 100vh;
 
@@ -108,7 +116,7 @@ span.expand {
 }
 
 .sidebar-logo a {
-    color: white;
+    color: var(--color1);
     font-size: 1.15rem;
     font-weight: 600;
 }
@@ -127,7 +135,7 @@ span.expand {
 
 a.sidebar-link {
     padding: .625rem 1.625rem;
-    color: white;
+    color:var(--color1);
     display: block;
     font-size: 0.9rem;
     white-space: nowrap;
@@ -136,7 +144,7 @@ a.sidebar-link {
 
 .sidebar-link {
     padding: .625rem 1.625rem;
-    color: white;
+    color: var(--color1);
     display: block;
     font-size: 0.9rem;
     white-space: nowrap;
@@ -150,8 +158,8 @@ a.sidebar-link {
 }
 
 a.sidebar-link:hover {
-    background-color: #48484a;
-    border-left: 3px solid #dcddde;
+    background-color: var(--color3);
+    border-left: 3px solid var(--color4);
 }
 
 .sidebar-item {
@@ -180,30 +188,17 @@ a.sidebar-link:hover {
 
 /* Imagen PNG centrada */
 
+
+
 .centered-image {
     max-width: 50%; 
     margin-left: 141px;
     height: auto; 
 }
 
-.cont-pr .row *{
-    padding: 1rem 2rem;
-    background-color: rgba(137, 43, 226, 0.295);
-    border: 1px blueviolet solid;
+.border-image{
+    border-radius: 10px;
 }
-
-
-.my-navbar-color{
-    background-color: rgb(88, 17, 155);
-}
-
-.my-button{
-    background-color: rgb(92, 0, 121);
-}
-.my-button:hover{
-background-color: rgb(175, 134, 212);
-}
-
 .wrapper-form{
     margin: 2rem 12rem;
 }
@@ -218,13 +213,13 @@ background-color: rgb(175, 134, 212);
 
 .exhibitions-section {
     font-family: "Montserrat", sans-serif;; /* Similar a la fuente de la imagen */
-    color: #333; /* Color neutro para el texto */
+    color: var(--color2); /* Color neutro para el texto */
 }
 
 .section-number {
     font-size: 3rem; /* Título de sección grande */
     font-weight: bold;
-    color: #ff5733; /* Color destacado para los números (puedes cambiarlo) */
+    color: var(--color5); /* Color destacado para los números (puedes cambiarlo) */
 }
 
 .section-title {
@@ -236,12 +231,12 @@ background-color: rgb(175, 134, 212);
 .section-content p {
     margin: 0;
     font-size: 1rem;
-    color: #666; /* Color suave para el texto */
+    color: var(--color2); /* Color suave para el texto */
 }
 
 .section-content hr {
     border: none;
-    border-top: 1px solid #ccc; /* Líneas finas como separadores */
+    border-top: 1px solid var(--color6); /* Líneas finas como separadores */
     margin: 1rem 0;
 }
 
@@ -256,28 +251,20 @@ background-color: rgb(175, 134, 212);
     background-position: center; /* Centra la imagen dentro del div */
     background-repeat: no-repeat; /* No repite la imagen */
 }
-
-/* Estilos para el formulario con los colores especificados */
-
-
-
-
-
+.form-control{
+    border: 1px solid var(--color5);
+}
 .btn-primary {
-    background-color: #dcddde; /* Color del botón de envío */
+    background-color: var(--color3); /* Color del botón de envío */
     border: none;
-    color: #231f20; /* Texto oscuro en el botón */
+    color: var(--color1); /* Texto oscuro en el botón */
     
 }
 
 .btn-primary:hover {
-    background-color: #fafafa; /* Color del botón al pasar el ratón */
-    color: #231f20;
+    background-color: var(--color5); /* Color del botón al pasar el ratón */
+    color: var(--color2);
 }
-
-
-
-
 
 
 /* Estilos para pantallas pequeñas (menos de 1024px) */
