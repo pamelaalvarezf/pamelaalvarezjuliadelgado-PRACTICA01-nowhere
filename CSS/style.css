@@ -272,7 +272,7 @@ footer{
     background-color: var(--color2);
 }
 
-.footer, p{
+.footer, .p-autor, .p-footer{
     text-align: center;
     font-size: 1rem;
     margin: 0;
